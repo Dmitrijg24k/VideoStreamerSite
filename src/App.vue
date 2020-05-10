@@ -23,6 +23,9 @@ export default {
 </script>
 
 <style>
+  html{
+        scroll-behavior: smooth;
+  }
   @font-face {
     font-family: 'EBGaramond';
     src: url('~@/assets/fonts/EBGaramond-VariableFont_wght.ttf');

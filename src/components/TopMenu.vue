@@ -9,10 +9,10 @@
                             <a href="#" class="nav-link">Основные особенности</a>
                         </li>
                         <li class="navbar-item">
-                            <a href="#" class="nav-link">Технические возможности</a>
+                            <a href="#accordion" class="nav-link">Технические возможности</a>
                         </li>
                         <li class="navbar-item active">
-                            <a href="#" class="nav-link">Связаться с нами</a>
+                            <a href="#subscribe" class="nav-link">Связаться с нами</a>
                         </li>
                     </ul>
                 </div>
@@ -33,7 +33,13 @@ export default {
     
 }
 </script>
-
+<style lang="css">
+    #accordion{
+        border-top: 60px solid transparent;
+        margin-top: -60px;
+        background-clip: padding-box;
+    }
+</style>
 <style lang="scss" scoped>
     .top-menu{
         position: fixed;
@@ -87,6 +93,7 @@ export default {
             border: 1.5px solid lighten(#0f38ab, 20%);
         }
     }
+   
     .actions{
         font-style: normal;
         font-weight: 600;

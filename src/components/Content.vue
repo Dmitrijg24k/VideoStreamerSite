@@ -77,7 +77,7 @@
                 </div>
             </div>
         </div>
-        <div class="accordion">
+        <div class="accordion" id = "accordion">
             <div @click="dropInfoStatus = !dropInfoStatus" 
                 class="drop-block">
                  <div class="container">
@@ -119,7 +119,7 @@
                                 </ul>
                             </div>
                             <div class="col-lg-5">
-                                <h4>Вебинтерфейс</h4>
+                                <h4>Веб-интерфейс</h4>
                                 <p>В панели администратора можно увидеть такую информацию как:</p>
                                 <ul>
                                     <li>Текущее время работы системы; 
@@ -157,7 +157,7 @@
                                 </ul>
                             </div>
                             <div class="col-lg-5">
-                                <h4>Вебинтерфейс</h4>
+                                <h4>Веб-интерфейс</h4>
                                 <p>Также в панели администратора можно производить такие действия как:</p>
                                 <ul>
                                     <li>
@@ -187,15 +187,12 @@
                                         Железо: Процессор (CPU Xeon E5620 2.40 GHz) 2 шт., Оперативная память 32Gb RAM;
                                     </li>
                                     <li>
-                                        Железо: Процессор (CPU Xeon E5620 2.40 GHz) 2 шт., Оперативная память 32Gb RAM;
-                                    </li>
-                                    <li>
                                         Расчетная производительность: 1200-1300 камер.
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-lg-5">
-                                <h4>Вебинтерфейс</h4>
+                                <h4>Веб-интерфейс</h4>
                                 <p>Другие возможности веб-интерфейса:</p>
                                 <ul>
                                     <li>
@@ -221,10 +218,10 @@
                         <h2>Получить пробную версию </h2>
                         <form action="#" method="get">
                             <div class="form-item">
-                                <input type="text" name="name" id="name" value="Ваше имя">
+                                <input type="text" name="name" id="name" placeholder="Ваше имя">
                             </div>  
                             <div class="form-item">
-                                <input type="email" name="email" id="" value="Ваш email">
+                                <input type="email" name="email" id="" placeholder="Ваш email">
                             </div>  
                             <div class="form-item">
                                 <label for="textarea">Опишите вашу рекламу</label>
@@ -235,7 +232,7 @@
                                 <label for="checkbox">Получать оповещение о рекламе</label>
                             </div>  
                             <div class="form-item">
-                               <p>Ваши email и имя нужны, чтобы связаться с вами для выдачи триала. Отправляя заявку, вы соглашаетесь с <a href="">правилами</a> и <a href="">условиями</a></p>
+                               <p>Ваши email и имя нужны, чтобы связаться с вами для выдачи триала. Отправляя заявку, вы соглашаетесь с <a href="#">правилами</a> и <a href="#">условиями</a></p>
                             </div> 
                             <div class="form-item-button">
                                <input type="button" value="Отправить заявку">
@@ -288,6 +285,7 @@ export default {
                 font-size: 17px;
             }
             button{
+                transition: 1s linear;
                 padding: 8px 16px;
                 background-color: #e83333;
                 border: 2px solid #e83333;
@@ -295,6 +293,11 @@ export default {
                 font-size: 19px;  
                 font-weight: 500;
                 border-radius: 4px;
+            }
+            button:hover{
+                background-color:  #e78f2a;
+                border: 2px solid #e78f2a;
+                border-radius: 6px;
             }
             img{
                 margin-top: -10px;
@@ -390,6 +393,7 @@ export default {
         .drop-info{
             background-color: #fff;
             padding-top: 60px;
+            transition: all 0.3s ease;
             h4{
                 margin-bottom: 15px;
                 font-style: normal;
@@ -398,6 +402,9 @@ export default {
                 font-size: 38px;
                 color: #FF6565;
                 transition: all .4s ease;
+            }
+            p{
+                font-size:  19px;
             }
             h4:hover{
                 color: rgb(66, 135, 167);
@@ -545,7 +552,7 @@ export default {
                     text-transform: uppercase;
                     font-size: 15px;
                     font-weight: 500;
-                    transition: all .2s ease-in-out;
+                    transition: all .5s ease-in-out;
                 }
                 input:hover{
                     background-color: #F66173;
