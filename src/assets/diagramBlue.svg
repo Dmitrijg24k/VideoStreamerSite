@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="diagram.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg16"
+   version="1.1"
+   viewBox="0 0 300 300"
+   height="300"
+   width="300">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:window-height="728"
+     inkscape:window-width="1366"
+     units="px"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="155.93898"
+     inkscape:cx="234.87577"
+     inkscape:zoom="0.98994949"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Слой 1">
+    <path
+       id="path35"
+       d="M 40,259.29872 39.782698,49.300383"
+       style="fill:#0000d4;
+       stroke:#0055d4;
+       stroke-width:2.78274px;
+       stroke-linecap:butt;
+       stroke-linejoin:miter;
+       stroke-opacity:1;
+       stroke-dashoffset:0;"
+       class="path" fill= "none" stroke ="#0055d4" stroke-width ="1.5" stroke-dasharray= "220.2" stroke-dashoffset="0">
+         <animate id="path1" attributeName="stroke-dashoffset" begin="0s;f1.end+0.8s" values="220.2;0;" dur="4s" repeatCount="1" fill="freeze" calcMode="paced"/> 
+         <animate id="f1" attributeName="stroke" begin = "path1.end" values="#0055d4; #0055d4; #33e2e8; #0f38ab" dur="3s" fill="freeze"/> 
+         <animate id="t1" attributeName="stroke" begin = "path1.begin" values="#0f38ab; #0055d4" dur="0.2s" fill="freeze" repeatCount="1"/> 
+       </path>
+    <path
+       id="path862"
+       d="M 40,259.29872 90.913729,190.91883 H 176.7767 L 249.50768,84.852814"
+       style="fill:none;
+       stroke:#e83333;
+       stroke-width:2px;
+       stroke-linecap:butt;
+       stroke-linejoin:miter;
+       stroke-opacity:1" 
+       class="path" fill= "none" stroke ="#e83333" stroke-width ="1.5" stroke-dasharray= "300.2" stroke-dashoffset="0">
+       <animate id="path2" attributeName="stroke-dashoffset" begin="0s;f2.end+0.8s" values="300;0;" dur="4s" repeatCount="1" fill="freeze" calcMode="paced"/> 
+       <animate id="f2" attributeName="stroke" begin = "path2.end" values="#e83333; #BA297B; #33e2e8; #0f38ab" dur="3s" fill="freeze" />
+       <animate id="t2" attributeName="stroke" begin = "path2.begin" values="#0f38ab; #e83333" dur="0.2s" fill="freeze" repeatCount="1"/>   
+       </path>
+    <path
+       style="fill:#0000d4;
+       stroke:#0055d4;
+       stroke-width:1.78274px;
+       stroke-linecap:butt;
+       stroke-linejoin:miter;
+       stroke-opacity:1"
+       d="m 40,259.29872 209.9965,0.90398"
+       id="path35-5"
+       class="path" fill= "none" stroke ="#CCFF90" stroke-width ="1.5" stroke-dasharray= "220.2" stroke-dashoffset="0">
+         <animate id="path3" attributeName="stroke-dashoffset" begin="0s;f3.end+0.8s" values="220.2;0;" dur="4s" repeatCount="1" fill="freeze" calcMode="paced"/> 
+         <animate id="f3" attributeName="stroke" begin = "path3.end" values="#0055d4; #0055d4; #33e2e8; #0f38ab" dur="3s" fill="freeze" /> 
+         <animate id="t3" attributeName="stroke" begin = "path3.begin" values="#0f38ab; #0055d4" dur="0.2s" fill="freeze" repeatCount="1"/> 
+       </path>
+  </g>
+</svg>
