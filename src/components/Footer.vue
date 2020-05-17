@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <span class="copyright">&copy; Contora 2020</span>
+                        <span class="copyright">&copy; Айти Глобал Сервис Групп 2020</span>
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .footer{
-        background-color: #fff;
+        background-color: #003b32;
     }
     .copyright{
         display: block;
@@ -27,6 +27,6 @@ export default {
         text-align: left;
         padding: 5px 0px 20px;
         font-size: 14px;
-        color: #999;
+        color: rgb(201, 196, 196);
     }
 </style>

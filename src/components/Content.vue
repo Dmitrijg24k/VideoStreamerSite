@@ -11,7 +11,7 @@
                                 хранения и транспорта видеопотока с камер до 
                                 конечного пользователя. Видеостример может стать 
                                 основой как привычной системы видеонаблюдения, 
-                                так и частью более сложных систем . 
+                                так и частью более сложных систем. 
                                 Данный продукт позволяет организовать живую видеотрансляцию 
                                 с предоставлением массового доступа к видео, запись и 
                                 хранение видеопотока на сервере, а также предоставление 
@@ -20,7 +20,7 @@
                             <button>Презентация</button>
                         </div>
                         <div class="col-lg-5">
-                            <img src="./../assets/camBlue.png" alt="">
+                            <img src="./../assets/camDarkBlue.png" alt="">
                         </div>
                    </div>
                 </div>
@@ -240,11 +240,11 @@
                         </form>
                     </div>
                     <div class="col-lg-6">
-                        <div class="form-info">
+                        <div class="form-info" id = "form-info">
                             <a href="#"><h4>Здесь могла быть ваша реклама:</h4></a>
                             <p>Пожалуйста, заполните форму для получения бесплатного тестового ключа.</p>
                             <p>Если вы не получите от нас письмо в течение 30 мин, проверьте в спаме и добавьте наш адрес в избранные контакты.</p>
-                            <p>Email: weqwewaawfwdawddfg 124124124121 12412 4124 wdaw d 12</p>
+                            <p>Email: tech@roditelskiy.site</p>
                             <a href="$">Документация</a>
                         </div>
                     </div>
@@ -267,6 +267,7 @@ export default {
 <style lang="scss" scoped>
     .content{
         padding-top: 71px;
+        background-color: #31a881;
         color: #fff;
         text-align: left;
         .top-content{
@@ -300,7 +301,7 @@ export default {
                 border-radius: 6px;
             }
             img{
-                margin-top: -10px;
+                margin-top: -16px;
                 margin-left: -40px;
                 width: 500px;
             }
@@ -370,12 +371,12 @@ export default {
     .accordion{
         display: block;
         width: 100%;
-        color: #111111e5;
-        background-color: #ffffff;
+        color: #fff;
+        background-color: #3c8890;
         //background-color: #42A7A7;
         .drop-block{
-            background-color: #f1f1f1;
-            transition: 0.25s ease;
+            background-color: #00836f;
+            transition: .3s ease;
             padding: 15px 15px 5px 15px;
             h2{
                 font-size: 40px;
@@ -385,29 +386,29 @@ export default {
                 }
             }
         }
-        .drop-block:hover{
-            background-color: #42A7A7;
+        /*.drop-block:hover{
+            background-color: #a3d0b5;
             color: #fff;
             cursor: pointer;
-        }
+        }*/
         .drop-info{
-            background-color: #fff;
+            background-color: #31a881;
             padding-top: 60px;
-            transition: all 0.3s ease;
+            transition: all .3s ease;
             h4{
                 margin-bottom: 15px;
                 font-style: normal;
                 font-weight: 200;
                 display: block;
                 font-size: 38px;
-                color: #FF6565;
-                transition: all .4s ease;
+                color: #f2f3f4;
+                transition: all .6s ease;
             }
             p{
                 font-size:  19px;
             }
             h4:hover{
-                color: rgb(66, 135, 167);
+                color: #faebd7;
                 cursor: pointer;
             }
             ul{
@@ -424,7 +425,7 @@ export default {
                     top: 10px;
                     left: -15px;
                     border-radius: 50%;
-                    background-color: rgb(66, 135, 167);
+                    background-color: rgb(214, 206, 206);
                     width: 4px;
                     height: 4px;
                 }
@@ -433,7 +434,7 @@ export default {
         .drop-info-transition-enter-active, .fade-leave-active {
             transition: all 0.8s ease;
             height: 600px;
-            background-color: #fff;
+            background-color: #31a881;
             overflow: hidden;
         }
         .drop-info-transition-enter, .drop-info-transition-leave-to /* .fade-leave-active до версии 2.1.8 */ {
@@ -446,17 +447,17 @@ export default {
         padding-top: 80px;
         padding-bottom: 40px;
         border-bottom: 1px solid rgba(153, 153, 153, 0.658);
-        background-color: #fff;
-        color: #111111e5;
+        background-color: #e0e8e5;
+        color: #000000e5;
         .form-info{
             margin-top: 80px;
         }
         a{
             font-size: 16px;
-            color: #111111af;
+            color: #000000;
             transition: all .2 ease;
             h4{
-                color: #111111e5;
+                color: #5a9696;
                 font-size: 18px;
             }
         }
@@ -552,11 +553,11 @@ export default {
                     text-transform: uppercase;
                     font-size: 15px;
                     font-weight: 500;
-                    transition: all .5s ease-in-out;
+                    transition: all .9s ease-in-out;
                 }
                 input:hover{
-                    background-color: #F66173;
-                    border: 1px solid #F66173;
+                    background-color: #5d8d5d;
+                    border: 1px solid #5d8d5d;
                 }
             }
         }

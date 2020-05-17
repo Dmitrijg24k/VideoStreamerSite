@@ -64,8 +64,8 @@
        stroke-dashoffset:0;"
        class="path" fill= "none" stroke ="#0055d4" stroke-width ="1.5" stroke-dasharray= "220.2" stroke-dashoffset="0">
          <animate id="path1" attributeName="stroke-dashoffset" begin="0s;f1.end+0.8s" values="220.2;0;" dur="4s" repeatCount="1" fill="freeze" calcMode="paced"/> 
-         <animate id="f1" attributeName="stroke" begin = "path1.end" values="#0055d4; #0055d4; #33e2e8; #0f38ab" dur="3s" fill="freeze"/> 
-         <animate id="t1" attributeName="stroke" begin = "path1.begin" values="#0f38ab; #0055d4" dur="0.2s" fill="freeze" repeatCount="1"/> 
+         <animate id="f1" attributeName="stroke" begin = "path1.end" values="#0055d4; #0055d4; #33e2e8; #31a881" dur="3s" fill="freeze"/> 
+         <animate id="t1" attributeName="stroke" begin = "path1.begin" values="#31a881; #0055d4" dur="0.2s" fill="freeze" repeatCount="1"/> 
        </path>
     <path
        id="path862"
@@ -78,8 +78,8 @@
        stroke-opacity:1" 
        class="path" fill= "none" stroke ="#e83333" stroke-width ="1.5" stroke-dasharray= "300.2" stroke-dashoffset="0">
        <animate id="path2" attributeName="stroke-dashoffset" begin="0s;f2.end+0.8s" values="300;0;" dur="4s" repeatCount="1" fill="freeze" calcMode="paced"/> 
-       <animate id="f2" attributeName="stroke" begin = "path2.end" values="#e83333; #BA297B; #33e2e8; #0f38ab" dur="3s" fill="freeze" />
-       <animate id="t2" attributeName="stroke" begin = "path2.begin" values="#0f38ab; #e83333" dur="0.2s" fill="freeze" repeatCount="1"/>   
+       <animate id="f2" attributeName="stroke" begin = "path2.end" values="#e83333; #BA297B; #33e2e8; #31a881" dur="3s" fill="freeze" />
+       <animate id="t2" attributeName="stroke" begin = "path2.begin" values="#31a881; #e83333" dur="0.2s" fill="freeze" repeatCount="1"/>   
        </path>
     <path
        style="fill:#0000d4;
@@ -92,8 +92,8 @@
        id="path35-5"
        class="path" fill= "none" stroke ="#CCFF90" stroke-width ="1.5" stroke-dasharray= "220.2" stroke-dashoffset="0">
          <animate id="path3" attributeName="stroke-dashoffset" begin="0s;f3.end+0.8s" values="220.2;0;" dur="4s" repeatCount="1" fill="freeze" calcMode="paced"/> 
-         <animate id="f3" attributeName="stroke" begin = "path3.end" values="#0055d4; #0055d4; #33e2e8; #0f38ab" dur="3s" fill="freeze" /> 
-         <animate id="t3" attributeName="stroke" begin = "path3.begin" values="#0f38ab; #0055d4" dur="0.2s" fill="freeze" repeatCount="1"/> 
+         <animate id="f3" attributeName="stroke" begin = "path3.end" values="#0055d4; #0055d4; #33e2e8; #31a881" dur="3s" fill="freeze" /> 
+         <animate id="t3" attributeName="stroke" begin = "path3.begin" values="#31a881; #0055d4" dur="0.2s" fill="freeze" repeatCount="1"/> 
        </path>
   </g>
 </svg>

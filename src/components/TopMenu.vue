@@ -2,7 +2,7 @@
     <div class="top-menu">
         <div class="container-fluid">
             <nav class="navbar navbar-expand">
-                <a href="#" class="logo">Contora</a>
+                <a href="#" class="logo">ITSG</a>
                 <div class="menu-items collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav">
                         <li class="navbar-item active">
@@ -12,7 +12,7 @@
                             <a href="#accordion" class="nav-link">Технические возможности</a>
                         </li>
                         <li class="navbar-item active">
-                            <a href="#subscribe" class="nav-link">Связаться с нами</a>
+                            <a href="#form-info" class="nav-link">Связаться с нами</a>
                         </li>
                     </ul>
                 </div>
@@ -49,21 +49,22 @@ export default {
         width: 100%;
         padding: 7px 22px;
         transform: box-shadow .3s ease;
-        color: #fff;
+        color: z;
         height: 70;
         font-weight: 400;
         display: flex;
-        background-color: #0f38ab;
-        box-shadow: 0 0 20px #000;
+        background-color: #00836f;
+        box-shadow: 0 0 20px rgb(43, 42, 42);
     }
     a{
         text-decoration: none;
         color: #fff;
         margin-right: 15px;
+        transition: 0.5s ease;
     }
     a:hover{
         text-decoration: none;
-        color: #fff;
+        color: #faebd7;
     }
     .logo{
         font-style: italic;
@@ -84,17 +85,17 @@ export default {
         a{
             display: inline-block;
             padding: 2px 15px;
-            border: 1.5px solid #0f38ab;
-            transition: 0.5s ease;
+            border: 1.5px solid #00836f;
+            transition: 0.7s ease;
         }
         a:hover{
             padding: 2px 15px;
-            color: darken(#fff, 10%);
-            border: 1.5px solid lighten(#0f38ab, 20%);
+            color: darken(#faebd7, 10%);
+            border: 1.5px solid lighten(#fff, 20%);
         }
     }
    
-    .actions{
+   /*.actions{
         font-style: normal;
         font-weight: 600;
         display: block;
@@ -115,5 +116,5 @@ export default {
             color: darken(#fff, 20%);
           }
         }
-    }
+    }*/
 </style>
