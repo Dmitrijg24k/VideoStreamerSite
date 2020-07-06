@@ -7,17 +7,16 @@
                         <div class="col-lg-7">
                             <h1>Видеостример</h1>
                             <p>
-                                Видеостример позволяет решить задачу сбора, 
-                                хранения и транспорта видеопотока с камер до 
-                                конечного пользователя. Видеостример может стать 
-                                основой как привычной системы видеонаблюдения, 
-                                так и частью более сложных систем. 
-                                Данный продукт позволяет организовать живую видеотрансляцию 
-                                с предоставлением массового доступа к видео, запись и 
-                                хранение видеопотока на сервере, а также предоставление 
-                                архивного видео пользователям по запросу. 
+                                Видеостример – обеспечение для сбора, хранения и транспорта видеопотока 
+                                с камер до конечного пользователя – видеостример. 
+                                Видеостример может стать основой как привычной системы видеонаблюдения, 
+                                так и частью более сложных систем (продукт имеет специальное API, 
+                                позволяющее организовать взаимодействие с другими программными продуктами: 
+                                например, передачу видеопотока пользовательскому приложению). 
+                                Данный продукт позволяет организовать живую видеотрансляцию с 
+                                предоставлением массового доступа к видео, запись и хранение видеопотока 
+                                на сервере, а также предоставление архивного видео пользователям по запросу. 
                             </p>
-                            <button>Презентация</button>
                         </div>
                         <div class="col-lg-5">
                             <img src="./../assets/camDarkBlue.png" alt="">
@@ -32,9 +31,9 @@
                         <div class="col-lg-8">
                             <h3>Надёжная защита</h3>
                             <p>
-                                Для защиты данных от распространения видеоконтента неавторизованным 
-                                пользователям в системе предусмотрен механизм проверки токена авторизаци 
-                                (механизм токенов при необходимости можно отключить).
+                                Для защиты данных от распространения видеоконтента 
+                                неавторизованным пользователям в системе предусмотрен 
+                                механизм проверки токена авторизаци.
                             </p>
                         </div>
                     </div>
@@ -42,12 +41,14 @@
                 <div class="middle">
                     <div class="row justify-content-between">
                         <div class="col-lg-7">
-                            <h3>Высокая производительность</h3>
+                            <h3>Широкие возможности</h3>
                             <p>
-                                <span>Расчетная производительность составляет 1200-1300 камер.</span>
-                                При более производительном оборудовании 
-                                конечное количество камер упирается в ограничение 
-                                сетевого канала и ограничение архивного хранилища.
+                                Глубина архива настраивается для каждой камеры отдельно. 
+                                Также, при необходимости, можно настроить время суток, когда необходимо писать архив.
+                            </p>
+                            <p>
+                                Место хранения для каждой камеры настраивается индивидуально. 
+                                При необходимости, камеру можно отключить, не удаляя ее из общего списка камер.
                             </p>
                         </div>
                         <div class="col-lg-4">
@@ -55,23 +56,41 @@
                         </div>
                     </div>
                 </div>
-                <div class="bottom-content">
+                <div class="penultimate-content">
                     <div class="row">
                         <div class="col-lg-4">
                             <img src="./../assets/diagramBlue.svg" alt="">
                         </div>
                         <div class="col-lg-8">
-                            <h3>Широкие возможности</h3>
+                            <h3>Оценка производительности</h3>
                             <p>
-                                Глубина архива настраивается для каждой камеры отдельно. 
-                                Также, при необходимости, можно настроить время суток, 
-                                когда необходимо писать архив. 
+                                Операционная система: Ubuntu 18.04 версии и выше;
+                                Железо: Процессор (CPU Xeon E5620 2.40 GHz) 2 шт., Оперативная память 32Gb RAM;
+                                Расчетная производительность: 1200-1300 камер.
                             </p>
                             <p>
-                                Место хранения можно настраивать 
-                                для каждой камеры индивидуально (указывается путь к месту хранения).
-                                При необходимости, камеру можно отключить, не удаляя ее из общего списка камер.
+                                При более производительном оборудовании конечное количество камер упирается 
+                                в ограничение пропускной способности сетевого канала и ограничение объема архивного хранилища.
                             </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-content">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h3>Условия тестового использования</h3>
+                            <p>
+                                Мы предлагаем ознакомится с нашим программным продуктом на следующих условиях: 
+                            </p>
+                            <p>
+                                -	Бесплатный тестовый период - 60 дней. <br>
+                                -	Полный функционал программы. <br>
+                                -	Полная техническая поддержка и исправление выявленных ошибок. <br>  
+                                -	Льготные цены после завершения бесплатного тестового периода. <br>
+                            </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="./../assets/testdrive.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -224,16 +243,9 @@
                                 <input type="email" name="email" id="" placeholder="Ваш email">
                             </div>  
                             <div class="form-item">
-                                <label for="textarea">Опишите вашу рекламу</label>
+                                <label for="textarea">Опишите вашу компанию</label>
                                 <textarea name="description" id="description" cols="30" rows="10"></textarea>
                             </div>  
-                            <div class="form-item-checkbox">
-                                <input type="checkbox" name="subscribe" id="subscribe" >
-                                <label for="checkbox">Получать оповещение о рекламе</label>
-                            </div>  
-                            <div class="form-item">
-                               <p>Ваши email и имя нужны, чтобы связаться с вами для выдачи триала. Отправляя заявку, вы соглашаетесь с <a href="#">правилами</a> и <a href="#">условиями</a></p>
-                            </div> 
                             <div class="form-item-button">
                                <input type="button" value="Отправить заявку">
                             </div> 
@@ -241,17 +253,26 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="form-info" id = "form-info">
-                            <a href="#"><h4>Здесь могла быть ваша реклама:</h4></a>
-                            <p>Пожалуйста, заполните форму для получения бесплатного тестового ключа.</p>
-                            <p>Если вы не получите от нас письмо в течение 30 мин, проверьте в спаме и добавьте наш адрес в избранные контакты.</p>
-                            <p>Email: tech@roditelskiy.site</p>
-                            <a href="$">Документация</a>
+                            <h4>О компании</h4>
+                            <p>Разработка программного обеспечения – основное направление деятельности компании Айти Глобал Сервис Групп. <br> В своей работе наша компания использует самые современные методологии разработки программного обеспечения.</p>
                         </div>
                     </div>
                 </div> 
             </div>
         </div>
-    </div>     
+        <button class="open-button" v-on:click="openForm">Обратная связь</button>
+        <div class="chat-popup" id="myForm">
+        <form action="../action_page.php" class="form-container">
+            <h2>Обратная связь</h2>
+
+            <label for="msg"><b>Сообщение</b></label>
+            <textarea placeholder="Тип сообщения.." name="msg" required></textarea>
+
+            <button type="submit" class="btn">Отправить</button>
+            <button type="button" class="btn cancel" v-on:click="closeForm">Закрыть</button>
+        </form>
+        </div>
+    </div>    
 </template>
 <script>
 export default {
@@ -259,6 +280,14 @@ export default {
     data(){
         return{
             dropInfoStatus: false
+        }
+    },
+    methods: {
+        openForm : function () {
+            document.getElementById("myForm").style.display = "block";
+        },
+        closeForm : function () {
+            document.getElementById("myForm").style.display = "none";
         }
     }
 }
@@ -348,8 +377,7 @@ export default {
                 margin-top: 20px;
             }
         }
-        .bottom-content{
-            padding-bottom: 15px;
+        .penultimate-content{
             h3{
                 margin-top: 60px;
                 font-style: normal;
@@ -365,6 +393,25 @@ export default {
             }
             img{
                 margin-top: 0px;
+            }
+        }
+        .bottom-content{
+            padding-bottom: 35px;
+            h3{
+                margin-top: 60px;
+                font-style: normal;
+                font-weight: 100;
+                display: block;
+                font-size: 28px;
+            }
+            p{
+                font-style: normal;
+                font-weight: 100;
+                display: block;
+                font-size: 17px;
+            }
+            img{
+                margin-top: 35px;
             }
         }
     }
@@ -450,7 +497,7 @@ export default {
         background-color: #e0e8e5;
         color: #000000e5;
         .form-info{
-            margin-top: 80px;
+            margin-top: 100px;
         }
         a{
             font-size: 16px;
@@ -562,4 +609,74 @@ export default {
             }
         }
     }
+    .open-button {
+        background-color: #555;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 23px;
+        right: 28px;
+        width: 280px;
+        border-radius: 5px;
+    }
+    /* Всплывающий чат - скрыт по умолчанию */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  border-radius: 5px;
+  z-index: 9;
+  color:#101010d8;
+}
+
+/* Добавить стили для контейнера формы */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Полная ширина текстовой области */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* Когда текстовое поле получает фокус, сделайте что-нибудь */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Установите стиль для кнопки отправить/войти */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Добавить красный цвет фона для кнопки "Отмена" */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Добавить некоторые эффекты наведения на кнопки */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
 </style>
