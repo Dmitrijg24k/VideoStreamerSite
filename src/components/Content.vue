@@ -265,11 +265,12 @@
         <form action="../action_page.php" class="form-container">
             <h2>Обратная связь</h2>
 
-            <label for="msg"><b>Сообщение</b></label>
-            <textarea placeholder="Тип сообщения.." name="msg" required></textarea>
+            <label for="msg"><b>Введите ваш email</b></label>
+            <input class="chat-mail" type="email" name="email" id="" placeholder="email">
+            <textarea placeholder="Сообщение.." name="msg" required></textarea>
 
             <button type="submit" class="btn">Отправить</button>
-            <button type="button" class="btn cancel" v-on:click="closeForm">Закрыть</button>
+            <span class="close" v-on:click="closeForm"></span>
         </form>
         </div>
     </div>    
@@ -612,71 +613,128 @@ export default {
     .open-button {
         background-color: #555;
         color: white;
-        padding: 16px 20px;
+        padding: 8px 10px 25px 10px;
         border: none;
         cursor: pointer;
         opacity: 0.8;
         position: fixed;
-        bottom: 23px;
+        bottom: -25px;
         right: 28px;
-        width: 280px;
-        border-radius: 5px;
+        width: 240px;
+        border: none;
+        border-radius: 30px;
     }
     /* Всплывающий чат - скрыт по умолчанию */
-.chat-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  border-radius: 5px;
-  z-index: 9;
-  color:#101010d8;
-}
+    .chat-popup {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        right: 15px;
+        border: 3px solid #f1f1f1;
+        border-radius: 5px;
+        z-index: 9;
+        color:#101010d8;
+        animation: go-top 2s 1 alternate;
+        -webkit-animation: go-top 2s 1 alternate;
+    }
 
-/* Добавить стили для контейнера формы */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
+    /* Добавить стили для контейнера формы */
+    .form-container {
+        max-width: 300px;
+        padding: 10px;
+        background-color: white;
+    }
+    @keyframes go-top {   
+        from {
+            bottom: -516px;      
+        }
+        to {
+            bottom: 0px; 
+        }
+    }
 
-/* Полная ширина текстовой области */
-.form-container textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-  resize: none;
-  min-height: 200px;
-}
+    /* Префикс для Chrome, Opera, Safari */
+    @-webkit-keyframes go-top {
+        from {
+            bottom: -516px;
+        }
+        to {
+            bottom: 0px;
+        }
+    }
+    .chat-mail {
+        width: 100%;
+        padding: 5px;
+        margin: 5px 0px 5px 0px;
+        border: 1px solid #f1f1f1;
+        border-radius: 5px;
+        background: #f1f1f1;
+        resize: none;
+        min-height: 20px;
+    }
+    /* Полная ширина текстовой области */
+    .form-container textarea {
+        width: 100%;
+        padding: 5px;
+        margin: 5px 0 22px 0;
+        border: 1px solid #f1f1f1;
+        border-radius: 5px;
+        background: #f1f1f1;
+        resize: none;
+        min-height: 200px;
+    }
 
-/* Когда текстовое поле получает фокус, сделайте что-нибудь */
-.form-container textarea:focus {
-  background-color: #ddd;
-  outline: none;
-}
+    /* Когда текстовое поле получает фокус, сделайте что-нибудь */
+    .form-container textarea:focus {
+        background-color: #ddd;
+        outline: none;
+    }
 
-/* Установите стиль для кнопки отправить/войти */
-.form-container .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
+    /* Установите стиль для кнопки отправить/войти */
+    .form-container .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: 0.8;
+    }
 
-/* Добавить красный цвет фона для кнопки "Отмена" */
-.form-container .cancel {
-  background-color: red;
-}
+    /* Добавить красный цвет фона для кнопки "Отмена" */
+    .form-container .cancel {
+        background-color: red;
+    }
 
-/* Добавить некоторые эффекты наведения на кнопки */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}
+    /* Добавить некоторые эффекты наведения на кнопки */
+    .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+    }
+    .close {
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        opacity: 0.3;
+        cursor: pointer;
+    }
+    .close:hover {
+        opacity: 1;
+    }
+    .close:before, .close:after {
+        position: absolute;
+        left: 2px;
+        content: ' ';
+        height: 25px;
+        width: 3px;
+        background-color: #333;
+    }
+    .close:before {
+        transform: rotate(45deg);
+    }
+    .close:after {
+        transform: rotate(-45deg);
+    }
 </style>
