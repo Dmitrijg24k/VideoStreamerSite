@@ -188,28 +188,24 @@
         <div class="row">
           <div class="col-lg-6">
             <h2>Получить пробную версию</h2>
-            <form action="#" method="get">
-              <!-- <div class="form-item">
-                    <input type="text" name="name" id="name" placeholder="Ваше имя">
-              </div>-->
-              <div class="form-item">
-                <input type="email" name="email" v-model="email" placeholder="Ваш email" />
-              </div>
-              <div class="form-item">
-                <label for="textarea">Опишите вашу компанию</label>
+            <div class="testVersion">
+                <label for="email"><b>{{error}}</b></label>
+                <input type="email" v-model="email" id placeholder="email" required/>
+                <label for="textarea">{{errorMess1}}</label>
                 <textarea
                   id="description"
                   rows="12"
                   max-rows="30"
                   class="textarea"
                   v-model="message"
+                  placeholder=""
+                  minlength="10"
                   required
                 ></textarea>
-              </div>
-              <div class="form-item-button">
-                <input type="button" value="Отправить заявку" v-on:click="sendMessage('request')" />
-              </div>
-            </form>
+              
+              
+                <button v-on:click="sendMessage('request')">Отправить заявку</button>
+            </div>
           </div>
           <div class="col-lg-6">
             <div class="form-info" id="form-info">
@@ -228,10 +224,13 @@
       <form action="/" class="form-container">
         <h2>Обратная связь</h2>
 
-        <label for="msg">
-          <b>Введите ваш email</b>
+        <label for="email">
+          <b>{{error}}</b>
         </label>
-        <input class="chat-mail" type="email" v-model="email" id placeholder="email" />
+        <input class="chat-mail" type="email" v-model="email" id placeholder="email" required/>
+        <label for="textarea">
+          <b>{{errorMess2}}</b>
+        </label>
         <textarea placeholder="Сообщение.." v-model="message" required></textarea>
 
         <button v-on:click="sendMessage('question')" class="btn">Отправить</button>
@@ -249,6 +248,9 @@ export default {
     return {
       dropInfoStatus: false,
       errors: [],
+      error: "",
+      errorMess1: "Опишите вашу компанию",
+      errorMess2: "",
       email: "",
       message: ""
     };
@@ -256,6 +258,7 @@ export default {
   methods: {
     sendMessage: function(request) {
       const params = new URLSearchParams();
+      this.checkForm();
       params.append("email", this.email);
       params.append("message", this.message);
       params.append("request", request);
@@ -270,6 +273,27 @@ export default {
     },
     closeForm: function() {
       document.getElementById("myForm").style.display = "none";
+    },
+    checkForm:function() {
+      if(this.message.length < 10) {
+        this.errorMess1 = 'Опишите вашу компанию более подробно';
+        this.errorMess2 = 'Напишите более длинное сообщение';
+      }
+      else{
+        this.errorMess1 = "";
+        this.errorMess2 = "";
+      }
+      if(!this.validEmail(this.email)) {
+        this.error = "Требуется действительный адрес электронной почты.";
+      } else{
+        this.error = "";
+      }
+      // if(!this.errors.length) return true;
+      // e.preventDefault();
+    },
+    validEmail:function(email) {
+      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
     }
   }
 };
@@ -474,7 +498,7 @@ export default {
   }
 }
 .conection {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(153, 153, 153, 0.658);
   background-color: #e0e8e5;
@@ -500,96 +524,94 @@ export default {
     font-weight: 500;
     font-family: EBGaramond, Helvetica, Arial, sans-serif;
   }
-  form {
-    .form-item {
-      input {
-        display: block;
-        height: 40px;
-        width: 100%;
-        border: none;
-        border-bottom: 1.3px solid #11111133;
-        border-radius: 2px;
-        margin: 15px 0px;
-        color: #11111162;
-        font-size: 24px;
-        font-weight: 500;
-      }
-      textarea {
-        overflow: auto;
-        resize: none;
-        overflow-wrap: break-word;
-        min-height: 55px;
-        display: block;
-        height: 55px;
-        width: 100%;
-        border: 1.3px solid #11111133;
-        border-radius: 4px;
-        margin-bottom: 15px;
-      }
-      label {
-        display: block;
-        width: 100%;
-        margin: 5px 0px;
-        color: #11111162;
-        font-size: 24px;
-        font-weight: 500;
-      }
-      p {
-        display: block;
-        width: 100%;
-        margin: 5px 0px 15px;
-        color: #111111e5;
+  .testVersion {
+    input {
+      display: block;
+      height: 40px;
+      width: 100%;
+      border-radius: 2px;
+      border: 1px solid #bfc7c8;
+      color: #bfc7c8;
+      margin: 15px 0px;
+      color: #11111162;
+      font-size: 24px;
+      font-weight: 500;
+    }
+    textarea {
+      overflow: auto;
+      resize: none;
+      overflow-wrap: break-word;
+      min-height: 55px;
+      display: block;
+      height: 155px;
+      width: 100%;
+      border: 1.3px solid #bfc7c8;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      width: 100%;
+      margin: 5px 0px;
+      color: #111111bb;
+      font-size: 24px;
+      font-weight: 500;
+    }
+    p {
+      display: block;
+      width: 100%;
+      margin: 5px 0px 15px;
+      color: #111111e5;
+      font-size: 15px;
+      font-weight: 400;
+      a {
+        color: #42a7a7;
         font-size: 15px;
         font-weight: 400;
-        a {
-          color: #42a7a7;
-          font-size: 15px;
-          font-weight: 400;
-        }
       }
     }
-    .form-item-checkbox {
-      input {
-        display: inline-block;
-        height: 16px;
-        width: 16px;
-        border-radius: 2px;
-        margin: 10px 0px;
-        color: #11111162;
-        font-size: 24px;
-        font-weight: 500;
-      }
-      label {
-        display: inline-block;
-        width: 80%;
-        margin-left: 15px;
-        color: #11111162;
-        font-size: 16px;
-        font-weight: 800;
-        text-transform: uppercase;
-        font-weight: 500;
-      }
+    // .form-item-checkbox {
+    //   input {
+    //     display: inline-block;
+    //     height: 16px;
+    //     width: 16px;
+    //     border-radius: 2px;
+    //     margin: 10px 0px;
+    //     color: #11111162;
+    //     font-size: 24px;
+    //     font-weight: 500;
+    //   }
+    //   label {
+    //     display: inline-block;
+    //     width: 80%;
+    //     margin-left: 15px;
+    //     color: #11111162;
+    //     font-size: 16px;
+    //     font-weight: 800;
+    //     text-transform: uppercase;
+    //     font-weight: 500;
+    //   }
+    // }
+    button {
+      display: block;
+      width: 100%;
+      margin: 5px 0px 15px;
+      padding: 15px 20px;
+      background-color: #42a7a7;
+      text-align: center;
+      color: #eeeeeee5;
+      border: 1px solid #42a7a7;
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.9s ease-in-out;
     }
-    .form-item-button {
-      input {
-        display: block;
-        width: 100%;
-        margin: 5px 0px 15px;
-        padding: 15px 20px;
-        background-color: #42a7a7;
-        text-align: center;
-        color: #eeeeeee5;
-        border: 1px solid #42a7a7;
-        text-transform: uppercase;
-        font-size: 15px;
-        font-weight: 500;
-        transition: all 0.9s ease-in-out;
-      }
-      input:hover {
-        background-color: #5d8d5d;
-        border: 1px solid #5d8d5d;
-      }
+    button:hover {
+      background-color: #5d8d5d;
+      border: 1px solid #5d8d5d;
     }
+    input:invalid:not(:placeholder-shown), textarea:invalid:not(:placeholder-shown) {border-color: rgb(255, 70, 70);}
+    input:valid:not(:placeholder-shown), textarea:valid:not(:placeholder-shown) {border-color: #31a881;}
   }
 }
 .open-button {
@@ -615,7 +637,7 @@ export default {
   border: 3px solid #f1f1f1;
   border-radius: 5px;
   z-index: 9;
-  color: #101010d8;
+  color: #495057;
   animation: go-top 2s 1 alternate;
   -webkit-animation: go-top 2s 1 alternate;
 }
@@ -648,7 +670,8 @@ export default {
   width: 100%;
   padding: 5px;
   margin: 5px 0px 5px 0px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #bfc7c8;
+  color: #bfc7c8;
   border-radius: 5px;
   background: #f1f1f1;
   resize: none;
@@ -659,13 +682,15 @@ export default {
   width: 100%;
   padding: 5px;
   margin: 5px 0 22px 0;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #bfc7c8;
+  color: #bfc7c8;
   border-radius: 5px;
   background: #f1f1f1;
   resize: none;
   min-height: 200px;
 }
-
+.form-container input:invalid:not(:placeholder-shown), textarea:invalid:not(:placeholder-shown) {border-color: rgb(255, 70, 70);}
+.form-container input:valid:not(:placeholder-shown), textarea:valid:not(:placeholder-shown) {border-color: #31a881;}
 /* Когда текстовое поле получает фокус, сделайте что-нибудь */
 .form-container textarea:focus {
   background-color: #ddd;

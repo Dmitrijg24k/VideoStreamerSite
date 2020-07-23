@@ -3,7 +3,7 @@
         <div class="copy">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-10">
                         <span class="copyright">&copy; Айти Глобал Сервис Групп 2020</span>
                     </div>
                 </div>
