@@ -431,6 +431,7 @@ export default {
     background-color: #00836f;
     transition: 0.3s ease;
     padding: 15px 15px 5px 15px;
+    cursor: pointer;
     h2 {
       font-size: 40px;
       margin-left: 0px;
@@ -622,6 +623,7 @@ export default {
   cursor: pointer;
   opacity: 0.8;
   position: fixed;
+  z-index: 5;
   bottom: -25px;
   right: 28px;
   width: 240px;
