@@ -189,22 +189,22 @@
           <div class="col-lg-6">
             <h2>Получить пробную версию</h2>
             <div class="testVersion">
-                <label for="email"><b>{{error}}</b></label>
-                <input type="email" v-model="email" id placeholder="email" required/>
-                <label for="textarea">{{errorMess1}}</label>
-                <textarea
-                  id="description"
-                  rows="12"
-                  max-rows="30"
-                  class="textarea"
-                  v-model="message"
-                  placeholder=""
-                  minlength="10"
-                  required
-                ></textarea>
-              
-              
-                <button v-on:click="sendMessage('request')">Отправить заявку</button>
+              <label for="email">
+                <b>{{error}}</b>
+              </label>
+              <input type="email" v-model="requestEmail" id placeholder="email" required />
+              <label for="textarea">{{errorMess1}}</label>
+              <textarea
+                id="description"
+                rows="12"
+                max-rows="30"
+                class="textarea"
+                v-model="requestMessage"
+                placeholder
+                minlength="10"
+                required
+              ></textarea>
+              <button v-on:click="sendMessage('request')">Отправить заявку</button>
             </div>
           </div>
           <div class="col-lg-6">
@@ -227,12 +227,18 @@
         <label for="email">
           <b>{{error}}</b>
         </label>
-        <input class="chat-mail" type="email" v-model="email" id placeholder="email" required/>
+        <input
+          class="chat-mail"
+          type="email"
+          v-model="questionEmail"
+          id
+          placeholder="email"
+          required
+        />
         <label for="textarea">
           <b>{{errorMess2}}</b>
         </label>
-        <textarea placeholder="Сообщение.." v-model="message" required></textarea>
-
+        <textarea placeholder="Сообщение.." v-model="questionMessage" required></textarea>
         <button v-on:click="sendMessage('question')" class="btn">Отправить</button>
         <span class="close" v-on:click="closeForm"></span>
       </form>
@@ -251,51 +257,63 @@ export default {
       error: "",
       errorMess1: "Опишите вашу компанию",
       errorMess2: "",
-      email: "",
-      message: ""
+      questionEmail: "",
+      questionMessage: "",
+      requestEmail: "",
+      requestMessage: "",
     };
   },
   methods: {
-    sendMessage: function(request) {
+    sendMessage: function (request) {
       const params = new URLSearchParams();
       this.checkForm();
-      params.append("email", this.email);
-      params.append("message", this.message);
-      params.append("request", request);
-      axios({
-        method: "post",
-        url: "/mailer.php",
-        data: params
-      });
+      if (request == "question") {
+        params.append("email", this.questionEmail);
+        params.append("message", this.questionMessage);
+        params.append("request", request);
+        axios({
+          method: "post",
+          url: "/mailer.php",
+          data: params,
+        });
+      } else if (request == "request") {
+        params.append("email", this.requestEmail);
+        params.append("message", this.requestMessage);
+        params.append("request", request);
+        axios({
+          method: "post",
+          url: "/mailer.php",
+          data: params,
+        });
+      }
     },
-    openForm: function() {
+    openForm: function () {
       document.getElementById("myForm").style.display = "block";
     },
-    closeForm: function() {
+    closeForm: function () {
       document.getElementById("myForm").style.display = "none";
     },
-    checkForm:function() {
-      if(this.message.length < 10) {
-        this.errorMess1 = 'Опишите вашу компанию более подробно';
-        this.errorMess2 = 'Напишите более длинное сообщение';
-      }
-      else{
+    checkForm: function () {
+      if (this.message.length < 10) {
+        this.errorMess1 = "Опишите вашу компанию более подробно";
+        this.errorMess2 = "Напишите более длинное сообщение";
+      } else {
         this.errorMess1 = "";
         this.errorMess2 = "";
       }
-      if(!this.validEmail(this.email)) {
+      if (!this.validEmail(this.email)) {
         this.error = "Требуется действительный адрес электронной почты.";
-      } else{
+      } else {
         this.error = "";
       }
       // if(!this.errors.length) return true;
       // e.preventDefault();
     },
-    validEmail:function(email) {
+    validEmail: function (email) {
       var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -611,8 +629,14 @@ export default {
       background-color: #5d8d5d;
       border: 1px solid #5d8d5d;
     }
-    input:invalid:not(:placeholder-shown), textarea:invalid:not(:placeholder-shown) {border-color: rgb(255, 70, 70);}
-    input:valid:not(:placeholder-shown), textarea:valid:not(:placeholder-shown) {border-color: #31a881;}
+    input:invalid:not(:placeholder-shown),
+    textarea:invalid:not(:placeholder-shown) {
+      border-color: rgb(255, 70, 70);
+    }
+    input:valid:not(:placeholder-shown),
+    textarea:valid:not(:placeholder-shown) {
+      border-color: #31a881;
+    }
   }
 }
 .open-button {
@@ -691,8 +715,14 @@ export default {
   resize: none;
   min-height: 200px;
 }
-.form-container input:invalid:not(:placeholder-shown), textarea:invalid:not(:placeholder-shown) {border-color: rgb(255, 70, 70);}
-.form-container input:valid:not(:placeholder-shown), textarea:valid:not(:placeholder-shown) {border-color: #31a881;}
+.form-container input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: rgb(255, 70, 70);
+}
+.form-container input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+  border-color: #31a881;
+}
 /* Когда текстовое поле получает фокус, сделайте что-нибудь */
 .form-container textarea:focus {
   background-color: #ddd;
